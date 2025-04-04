@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-areas: 
+        "header header header header"
+        "nav main main main"
+        "footer footer footer footer";
+    grid-template-columns: repeat(4, 1fr);
+    gap:5px;
+    padding: 10px;
+    background: white;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+    background: red;
+    color: white;
+    font-weight: regular;
+    text-align: center;
+    font-family: "Mouse Memoirs", sans-serif;
+    font-size: 50px;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 25%));
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+    padding: 10px;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 25%));
+}
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: regular;
+    margin: 10px 0px;
+    font-family: "Mouse Memoirs", sans-serif;
+    font-size: 40px;
+}
+nav a:hover {
+    color: black;
+    background-color: white;
+    width: 100%;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    text-align: center;
+    color: black;
+    font-family: "Mouse Memoirs", sans-serif;
+    align-items: center;
+    font-size: 25px;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 50%));
+}
+main img {
+    width: 80%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer;
+    background: rgb(160, 160, 160);
+    color: white;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    font-family: "Mouse Memoirs", sans-serif;
+    font-weight: regular;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 25%));
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    nav {
+        align-items: center;
+        width: 100%;
+    }
+}
